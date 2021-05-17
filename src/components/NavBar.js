@@ -12,16 +12,19 @@ const Navigation = () => {
           <Link className="navLink" to="/Contact">Contact Concierge</Link>
         </li>
         <li>
-          <Link className="navLink" to="/:id">Your Details</Link>
+          <Link className="navLink" to="/Id">Your Details</Link>
         </li>
         <li>
-          <Link className="navLink" to="/change-password">Change Password</Link>
+          <Link className="navLink" to="/Create">Create Tennant</Link>
         </li>
         <li>
-          <Link className="navLink" to="/building-details">Building Details</Link>
+          <Link className="navLink" to="/Password">Change Password</Link>
         </li>
         <li>
-          <Link className="navLink" to="/view-dings">View Dings</Link>
+          <Link className="navLink" to="/BuildingDetails">Building Details</Link>
+        </li>
+        <li>
+          <Link className="navLink" to="/ViewDings">View Dings</Link>
         </li>
       </div>
     </div>
