@@ -1,11 +1,11 @@
 import React from "react";
 
-const viewDings = () => {
+const collectedParcel = () => {
   return (
-    <div className="DingWrapper">
+    <div className="ColleactedParcelWrapper">
       <h4> View Dings</h4>
-      <div className="ViewDings">
-        <ul className="Dings">
+      <div className="parcelCollected">
+        <ul className="Parcels">
           <li>
             <div>Guide title</div>
             <div>Lorem ipsum dolor sit amet.</div>
@@ -28,4 +28,4 @@ const viewDings = () => {
   );
 };
 
-export default viewDings;
+export default collectedParcel;

@@ -6,13 +6,16 @@ import Navigation from './NavBar';
 import Login from './LogIn';
 import CreateTennant from './CreateTennant';
 import accountDetails from './AccountDetails';
-import changePassword from './ChangePassword';
+import sendDingDong from './DingDong';
 import buildingDetails from './BuildingDetails';
-import viewDings from './ViewDings';
+import collectedParcel from './collectedParcel';
 import contactConcierge from './ContactConcierge';
+import Signup from './SignUp';
+import { AuthProvider } from '../contexts/AuthContext';
 
 function App() {
   return (
+    <AuthProvider>
       <Router>
         <Navigation />
         <header className="App-header">
@@ -23,11 +26,13 @@ function App() {
           <Route exact path="/Contact" component={contactConcierge} />
           <Route exact path="/Id" component={accountDetails} />
           <Route exact path="/Create" component={CreateTennant} />
-          <Route exact path="/Password" component={changePassword} />
+          <Route exact path="/SendDingDong" component={sendDingDong} />
           <Route exact path="/BuildingDetails" component={buildingDetails} />
-          <Route exact path="/ViewDings" component={viewDings} />
+          <Route exact path="/ParcelCollected" component={collectedParcel} />
+          <Route exact path="/SignUp" component={Signup} />
         </Switch>
       </Router>
+    </AuthProvider>
     );
   }
 

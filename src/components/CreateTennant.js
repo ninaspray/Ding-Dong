@@ -32,14 +32,14 @@ const CreateTennant = () => {
     <input
     type="telephone"
     name="telephone"
-    placeholder="Conact Number"
+    placeholder="Telephone"
     value={telephone}
     onChange={setInput}
     />
     <button type="submit">Submit</button>
     </form>
 
-  );
+  ); 
 };
 
 export default CreateTennant;
