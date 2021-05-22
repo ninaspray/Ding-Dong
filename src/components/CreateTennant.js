@@ -1,4 +1,5 @@
 import React from "react";
+import newTennant from '../services/newTennant';
 
 
 //custom Hooks
@@ -7,8 +8,9 @@ import { useForm } from '../hooks/useForm';
 
 const CreateTennant = () => {
 
-  const [{fullname, email, telephone, flat_number }, setInput] = useForm({
-    fullname: '',
+  const [{firstname, lastname, email, telephone, flat_number }, setInput] = useForm({
+    firstname: '',
+    lastname: '',
     email: '',
     telephone: '',
     flat_number: '',
@@ -16,7 +18,8 @@ const CreateTennant = () => {
 
   const submitForm = (e) => {
     e.preventDefault()
-    console.log("calling",fullname, email, telephone, flat_number)
+    newTennant({firstname, lastname, email, telephone, flat_number });
+    console.log("calling",firstname, lastname, email, telephone, flat_number)
   }
  
   return ( 
@@ -24,9 +27,16 @@ const CreateTennant = () => {
     <form onSubmit={submitForm}>
     <input
     type="text"
-    name="fullname"
-    placeholder="Full name" 
-    value={fullname}
+    name="firstname"
+    placeholder="First name" 
+    value={firstname}
+    onChange={setInput}
+    />
+    <input
+    type="text"
+    name="lastname"
+    placeholder="Last name" 
+    value={lastname}
     onChange={setInput}
     />
     <input
@@ -57,3 +67,4 @@ const CreateTennant = () => {
 };
 
 export default CreateTennant;
+
