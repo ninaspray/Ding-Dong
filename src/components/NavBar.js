@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//styles
+import '../styles/NavBar.css';
+
 const Navigation = () => {
   return (
     <div className="StyledNavWrap">
