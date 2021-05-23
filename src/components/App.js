@@ -13,6 +13,8 @@ import contactConcierge from './ContactConcierge';
 import Signup from './SignUp';
 import { AuthProvider } from '../contexts/AuthContext';
 
+
+
 function App() {
   return (
     <AuthProvider>
@@ -26,6 +28,7 @@ function App() {
           <Route exact path="/Contact" component={contactConcierge} />
           <Route exact path="/Id" component={accountDetails} />
           <Route exact path="/Create" component={CreateTennant} />
+          <Route exact path="/tennant"/> 
           <Route exact path="/SendDingDong" component={sendDingDong} />
           <Route exact path="/BuildingDetails" component={buildingDetails} />
           <Route exact path="/ParcelCollected" component={collectedParcel} />

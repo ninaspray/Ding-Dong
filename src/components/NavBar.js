@@ -15,6 +15,9 @@ const Navigation = () => {
           <Link className="navLink" to="/Create">Create Tennant</Link>
         </li>
         <li>
+          <Link className="navLink" to="/tennant">Find Tennant</Link>
+        </li>
+        <li>
           <Link className="navLink" to="/SendDingDong">Send Ding Dong</Link>
         </li>
         <li>
