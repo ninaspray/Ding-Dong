@@ -22,20 +22,11 @@ const Navigation = () => {
       <ul className="StyledNav">
         {currentUser && (
           <>
-            <li>
+            {/* <li>
               <Link className="navLink" to="/home">Your Details</Link>
-            </li>
+            </li> */}
             <li>
-              <Link className="navLink" to="/Create">Create Tennant</Link>
-            </li>
-            <li>
-              <Link className="navLink" to="/tennant">Find Tennant</Link>
-            </li>
-            <li>
-              <Link className="navLink" to="/SendDingDong">Send Ding Dong</Link>
-            </li>
-            <li>
-              <Link className="navLink" to="/CollectedParcel">Parcel Collected</Link>
+              <Link className="navLink" to="/create">Create Tennant</Link>
             </li>
             <li>
               <Link to="/" onClick={handleLogout}>Log out</Link>

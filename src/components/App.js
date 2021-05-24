@@ -40,8 +40,3 @@ function App() {
   }
 
 export default App;
-
-/*
-- once authenticated, lets remove (make it conditional) the login page
-    Login page: Redirect (if authenticated, redirect to /home)
-*/
