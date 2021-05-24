@@ -16,7 +16,6 @@ import { AuthProvider } from '../contexts/AuthContext';
 //<Route exact path="/tennant" component={Tennants}/>
 
 
-
 function App() {
   return (
     <AuthProvider>
@@ -24,9 +23,11 @@ function App() {
         <header className="App-header">
           <NavBar />
           <h2>Ding Dong</h2>
-          <div>logo goes here</div>
+          <div>
+            <img src="../Images/DingDongLogo.png" alt='DingDongLogo' />
+          </div>
         </header>
-        <main>
+        <main className="App-content">
           <Switch>
             <Route exact path="/" component={HomePage} />
             {/* <Route exact path="/home" component={accountDetails}/> */}
@@ -38,7 +39,7 @@ function App() {
           </Switch>
         </main>
       </Router>
-      <footer>
+      <footer className="App-footer">
         <div>footer goes here</div>
       </footer>
     </AuthProvider>
