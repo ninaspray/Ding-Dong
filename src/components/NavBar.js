@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//styles
+import '../styles/NavBar.css';
+
 const Navigation = () => {
   return (
     <div className="StyledNavWrap">
@@ -13,6 +16,9 @@ const Navigation = () => {
         </li>
         <li>
           <Link className="navLink" to="/Create">Create Tennant</Link>
+        </li>
+        <li>
+          <Link className="navLink" to="/tennant">Find Tennant</Link>
         </li>
         <li>
           <Link className="navLink" to="/SendDingDong">Send Ding Dong</Link>
