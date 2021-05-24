@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from '../hooks/useForm';
 import { useAuth } from '../contexts/AuthContext';
+import '../styles/LogIn.css'
 
 const Login = () => {
     const [{ email, password }, setInput] = useForm({
@@ -33,11 +34,12 @@ const Login = () => {
 
 
     return (
-        <>
-            <form onSubmit={handleSubmit}>
-                <div>
+        <div className="login">
+            <form onSubmit={handleSubmit} className="login__form">
+                <div className="login__input-wrapper">
+                    <label htmlFor="text-input">email</label>
                     <input
-                        id="email"
+                        id="text-input"
                         name="email"
                         type="text"
                         value={email}
@@ -45,9 +47,10 @@ const Login = () => {
                         onChange={setInput}
                     />
                 </div>
-                <div>
+                <div className="login__input-wrapper">
+                    <label htmlFor="password-input">password</label>
                     <input
-                        id="password"
+                        id="password-input"
                         name="password"
                         type="password"
                         value={password}
@@ -62,7 +65,7 @@ const Login = () => {
             <div>
                 Need an account? <Link to="/sign-up">Sign Up</Link>
             </div>
-        </>
+        </div>
     );
 };
 
