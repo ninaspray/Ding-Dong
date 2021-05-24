@@ -5,8 +5,8 @@ import { useAuth } from '../contexts/AuthContext';
 //styles
 import '../styles/NavBar.css';
 
-const Navigation = () => {
 
+const NavBar = () => {
   const { currentUser, logout } = useAuth();
   const history = useHistory();
 
@@ -15,7 +15,6 @@ const Navigation = () => {
     await logout();
     history.push('/');
 };
-
 
   return (
     <div className="StyledNavWrap">
@@ -37,4 +36,4 @@ const Navigation = () => {
     </div>
   );
 };
-export default Navigation;
+export default NavBar;
