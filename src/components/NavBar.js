@@ -7,7 +7,7 @@ import '../styles/NavBar.css';
 const NavBar = () => {
   return (
     <div className="StyledNavWrap">
-      <div className="StyledNav">
+      <ul className="StyledNav">
         <li>
           <Link className="navLink" to="/">Home</Link>
         </li>
@@ -29,7 +29,7 @@ const NavBar = () => {
         <li>
           <Link className="navLink" to="/CollectedParcel">Parcel Collected</Link>
         </li>
-      </div>
+      </ul>
     </div>
   );
 };
