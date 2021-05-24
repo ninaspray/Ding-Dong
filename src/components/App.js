@@ -7,11 +7,11 @@ import Login from './LogIn';
 import CreateTennant from './CreateTennant';
 import accountDetails from './AccountDetails';
 import sendDingDong from './DingDong';
-import buildingDetails from './BuildingDetails';
 import collectedParcel from './collectedParcel';
 import contactConcierge from './ContactConcierge';
 import Signup from './SignUp';
 import { AuthProvider } from '../contexts/AuthContext';
+import Tennant from './FindTennant';
 
 
 
@@ -19,18 +19,17 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <Navigation />
         <header className="App-header">
           <h2>Ding Dong</h2>
         </header>
+        <Navigation />
         <Switch>
           <Route exact path="/" component={Login} />
+          <Route exact path="/home" component={accountDetails}/>
           <Route exact path="/Contact" component={contactConcierge} />
-          <Route exact path="/Id" component={accountDetails} />
           <Route exact path="/Create" component={CreateTennant} />
-          <Route exact path="/tennant"/> 
+          <Route exact path="/tennant" component={Tennant}/> 
           <Route exact path="/SendDingDong" component={sendDingDong} />
-          <Route exact path="/BuildingDetails" component={buildingDetails} />
           <Route exact path="/ParcelCollected" component={collectedParcel} />
           <Route exact path="/SignUp" component={Signup} />
         </Switch>

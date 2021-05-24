@@ -22,7 +22,7 @@ const Login = () => {
             setError('');
             setLoading(true);
             await login(email, password);
-            history.push('/');
+            history.push('/home');
         } catch (e) {
             setError('Failed to sign in');
         } finally {
