@@ -2,7 +2,7 @@ import '../styles/App.css';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 //components
-import Navigation from './NavBar';
+import NavBar from './NavBar';
 import Login from './LogIn';
 import CreateTennant from './CreateTennant';
 import accountDetails from './AccountDetails';
@@ -19,7 +19,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <Navigation />
+        <NavBar />
         <header className="App-header">
           <h2>Ding Dong</h2>
         </header>

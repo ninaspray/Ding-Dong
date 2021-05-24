@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 //styles
 import '../styles/NavBar.css';
 
-const Navigation = () => {
+const NavBar = () => {
   return (
     <div className="StyledNavWrap">
       <div className="StyledNav">
@@ -33,4 +33,4 @@ const Navigation = () => {
     </div>
   );
 };
-export default Navigation;
+export default NavBar;
