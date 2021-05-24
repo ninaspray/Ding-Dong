@@ -2,16 +2,18 @@ import '../styles/App.css';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 //components
-import Navigation from './NavBar';
-import Login from './LogIn';
+import NavBar from './NavBar';
+// import Login from './LogIn';
+import HomePage from './HomePage';
 import CreateTennant from './CreateTennant';
-import accountDetails from './AccountDetails';
-import sendDingDong from './DingDong';
-import collectedParcel from './collectedParcel';
-import contactConcierge from './ContactConcierge';
+// import accountDetails from './AccountDetails';
+// import sendDingDong from './DingDong';
+// import collectedParcel from './collectedParcel';
+// import contactConcierge from './ContactConcierge';
 import Signup from './SignUp';
 import { AuthProvider } from '../contexts/AuthContext';
-import Tennant from './FindTennant';
+//import Tennants from './Tennant';
+//<Route exact path="/tennant" component={Tennants}/>
 
 
 
@@ -20,20 +22,25 @@ function App() {
     <AuthProvider>
       <Router>
         <header className="App-header">
+          <NavBar />
           <h2>Ding Dong</h2>
+          <div>logo goes here</div>
         </header>
-        <Navigation />
-        <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/home" component={accountDetails}/>
-          <Route exact path="/Contact" component={contactConcierge} />
-          <Route exact path="/Create" component={CreateTennant} />
-          <Route exact path="/tennant" component={Tennant}/> 
-          <Route exact path="/SendDingDong" component={sendDingDong} />
-          <Route exact path="/ParcelCollected" component={collectedParcel} />
-          <Route exact path="/SignUp" component={Signup} />
-        </Switch>
+        <main>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            {/* <Route exact path="/home" component={accountDetails}/> */}
+            {/* <Route exact path="/Contact" component={contactConcierge} /> */}
+            <Route exact path="/create" component={CreateTennant} />
+            {/* <Route exact path="/SendDingDong" component={sendDingDong} />
+            <Route exact path="/ParcelCollected" component={collectedParcel} /> */}
+            <Route exact path="/sign-up" component={Signup} />
+          </Switch>
+        </main>
       </Router>
+      <footer>
+        <div>footer goes here</div>
+      </footer>
     </AuthProvider>
     );
   }

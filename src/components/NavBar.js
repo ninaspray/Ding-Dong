@@ -5,8 +5,8 @@ import { useAuth } from '../contexts/AuthContext';
 //styles
 import '../styles/NavBar.css';
 
-const Navigation = () => {
 
+const NavBar = () => {
   const { currentUser, logout } = useAuth();
   const history = useHistory();
 
@@ -16,45 +16,24 @@ const Navigation = () => {
     history.push('/');
 };
 
-
   return (
     <div className="StyledNavWrap">
-      <div className="StyledNav">
+      <ul className="StyledNav">
         {currentUser && (
-        <li>
-          <Link className="navLink" to="/home">Your Details</Link>
-        </li>
+          <>
+            {/* <li>
+              <Link className="navLink" to="/home">Your Details</Link>
+            </li> */}
+            <li>
+              <Link className="navLink" to="/create">Create Tennant</Link>
+            </li>
+            <li>
+              <Link to="/" onClick={handleLogout}>Log out</Link>
+            </li>
+          </>
         )}
-        {currentUser && (
-        <li>
-          <Link className="navLink" to="/Create">Create Tennant</Link>
-        </li>
-        )}
-        {currentUser && (
-        <li>
-          <Link className="navLink" to="/tennant">Find Tennant</Link>
-        </li>
-        )}
-        {currentUser && (
-        <li>
-          <Link className="navLink" to="/SendDingDong">Send Ding Dong</Link>
-        </li>
-        )}
-        {currentUser && (
-        <li>
-          <Link className="navLink" to="/CollectedParcel">Parcel Collected</Link>
-        </li>
-        )}
-        {currentUser && (
-        <li>
-        <Link to="/" onClick={handleLogout}>
-              Log out
-         </Link>
-        </li>
-        )}
-        
-      </div>
+      </ul>
     </div>
   );
 };
-export default Navigation;
+export default NavBar;
