@@ -1,5 +1,5 @@
 import React from 'react';
-import newParcel from '../services/newParcel';
+import newParcel from '../requests/newParcel';
 
 //custom Hooks
 import { useForm } from '../hooks/useForm';

@@ -1,5 +1,5 @@
 import React from "react";
-import newTennant from '../services/newTennant';
+import newTennant from '../requests/newTennant';
 
 //custom Hooks
 import { useForm } from '../hooks/useForm';
