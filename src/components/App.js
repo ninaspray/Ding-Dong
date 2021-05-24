@@ -19,22 +19,28 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <NavBar />
         <header className="App-header">
+          <NavBar />
           <h2>Ding Dong</h2>
+          <div>logo goes here</div>
         </header>
-        <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/Contact" component={contactConcierge} />
-          <Route exact path="/Id" component={accountDetails} />
-          <Route exact path="/Create" component={CreateTennant} />
-          <Route exact path="/tennant"/> 
-          <Route exact path="/SendDingDong" component={sendDingDong} />
-          <Route exact path="/BuildingDetails" component={buildingDetails} />
-          <Route exact path="/ParcelCollected" component={collectedParcel} />
-          <Route exact path="/SignUp" component={Signup} />
-        </Switch>
+        <main>
+          <Switch>
+            <Route exact path="/" component={Login} />
+            <Route exact path="/Contact" component={contactConcierge} />
+            <Route exact path="/Id" component={accountDetails} />
+            <Route exact path="/Create" component={CreateTennant} />
+            <Route exact path="/tennant"/> 
+            <Route exact path="/SendDingDong" component={sendDingDong} />
+            <Route exact path="/BuildingDetails" component={buildingDetails} />
+            <Route exact path="/ParcelCollected" component={collectedParcel} />
+            <Route exact path="/SignUp" component={Signup} />
+          </Switch>
+        </main>
       </Router>
+      <footer>
+        <div>footer goes here</div>
+      </footer>
     </AuthProvider>
     );
   }
