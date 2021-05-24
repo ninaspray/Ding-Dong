@@ -3,15 +3,17 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 //components
 import Navigation from './NavBar';
-import Login from './LogIn';
+// import Login from './LogIn';
+import HomePage from './HomePage';
 import CreateTennant from './CreateTennant';
-import accountDetails from './AccountDetails';
-import sendDingDong from './DingDong';
-import collectedParcel from './collectedParcel';
-import contactConcierge from './ContactConcierge';
+// import accountDetails from './AccountDetails';
+// import sendDingDong from './DingDong';
+// import collectedParcel from './collectedParcel';
+// import contactConcierge from './ContactConcierge';
 import Signup from './SignUp';
 import { AuthProvider } from '../contexts/AuthContext';
-import Tennant from './FindTennant';
+//import Tennants from './Tennant';
+//<Route exact path="/tennant" component={Tennants}/>
 
 
 
@@ -24,14 +26,13 @@ function App() {
         </header>
         <Navigation />
         <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/home" component={accountDetails}/>
-          <Route exact path="/Contact" component={contactConcierge} />
-          <Route exact path="/Create" component={CreateTennant} />
-          <Route exact path="/tennant" component={Tennant}/> 
-          <Route exact path="/SendDingDong" component={sendDingDong} />
-          <Route exact path="/ParcelCollected" component={collectedParcel} />
-          <Route exact path="/SignUp" component={Signup} />
+          <Route exact path="/" component={HomePage} />
+          {/* <Route exact path="/home" component={accountDetails}/> */}
+          {/* <Route exact path="/Contact" component={contactConcierge} /> */}
+          <Route exact path="/create" component={CreateTennant} />
+          {/* <Route exact path="/SendDingDong" component={sendDingDong} />
+          <Route exact path="/ParcelCollected" component={collectedParcel} /> */}
+          <Route exact path="/sign-up" component={Signup} />
         </Switch>
       </Router>
     </AuthProvider>
@@ -39,3 +40,8 @@ function App() {
   }
 
 export default App;
+
+/*
+- once authenticated, lets remove (make it conditional) the login page
+    Login page: Redirect (if authenticated, redirect to /home)
+*/
