@@ -19,6 +19,7 @@ const NavBar = () => {
   return (
     <div className="StyledNavWrap">
       <ul className="StyledNav">
+
         {currentUser && (
           <>
             {/* <li>
