@@ -1,11 +1,11 @@
 import React from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import Login from './LogIn';
-import TennatList from './TennatList';
+import TenantList from './TenantList';
 
 const HomePage = () => {
     const { currentUser } = useAuth();
-    return currentUser ? <TennatList /> : <Login />;
+    return currentUser ? <TenantList /> : <Login />;
 }
 
 export default HomePage;

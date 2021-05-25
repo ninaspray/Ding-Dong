@@ -6,18 +6,17 @@ import getTennant from '../requests/getTennant';
 
 const TennantRow = ({tennant}) => {
 
-    const {firstname} = tennant;
-
-    /* 
+    const {lastname} = tennant;
+     /* 
     tr 
         td: flat
         td: full name
         td: actions
     */
-    return <li> {firstname} </li>    
+    return <li> {lastname} </li>    
 }
 
-const TenatList = () => {
+const TenantList = () => {
     const [list, setList] = useState([]);
 
     useEffect(() => {
@@ -46,4 +45,4 @@ const TenatList = () => {
     );
 }
 
-export default TenatList;
+export default TenantList;
