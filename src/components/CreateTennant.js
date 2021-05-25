@@ -63,6 +63,7 @@ const CreateTennant = () => {
               value={flat_number}
               onChange={setInput}
             >
+              <option>Flats...</option>
              <option value="1A">1A</option>
              <option value="2B">2B</option>
              <option value="3C">3C</option>

@@ -5,7 +5,6 @@ import getTennant from '../requests/getTennant';
 
 
 const TennantRow = ({tennant}) => {
-
     const {firstname, lastname, flat_number} = tennant;
     return <tr> <td>{firstname}</td> <td>{lastname}</td> <td>{flat_number}</td></tr>    
 }
