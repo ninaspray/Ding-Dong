@@ -5,9 +5,10 @@ import newTennant from '../requests/newTennant';
 import { useForm } from '../hooks/useForm';
 
 
+
 const CreateTennant = () => {
 
-    const [{firstname, lastname, email, telephone, flat_number }, setInput] = useForm({
+    const [{firstname, lastname, email, telephone, flat_number }, setInput, resetInput] = useForm({
     firstname: '',
     lastname: '',
     email: '',
@@ -18,12 +19,14 @@ const CreateTennant = () => {
   const submitForm = (e) => {
     e.preventDefault()
     newTennant({firstname, lastname, email, telephone, flat_number });
+    resetInput(e);
     //console.log("calling",firstname, lastname, email, telephone, flat_number)
   }
  
+
   return ( 
 
-    <form onSubmit={submitForm}>
+    <form onSubmit={submitForm} >
     <input
     type="text"
     name="firstname"
@@ -72,12 +75,13 @@ const CreateTennant = () => {
             <option value="10J">10J</option>
             </select>
             </label>        
-          
     <button type="submit">Submit</button>
+    
     </form>
 
   ); 
 };
+ 
 
 export default CreateTennant;
 
