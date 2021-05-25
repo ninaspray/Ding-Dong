@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import getTennant from '../requests/getTennant';
+import SendDingDong from './DingDong';
+//import sendDingDong from './DingDong';
 
 // DingDongCTA props => tenant id
 
 
 const TennantRow = ({tennant}) => {
     const {firstname, lastname, flat_number} = tennant;
-    return <tr> <td>{firstname}</td> <td>{lastname}</td> <td>{flat_number}</td></tr>    
+    return  <tr> <td>{firstname}</td><br/> 
+            <td>{lastname}</td><br/> 
+            <td>{flat_number}</td><br/>
+            <td><SendDingDong/></td></tr>    
 }
 
 const TenantList = () => {

@@ -20,9 +20,6 @@ const SendDingDong = () => {
  
   return (  
         <>
-        <h1>   
-        Find Tennant Function
-        </h1>
       
     <form onSubmit={submitForm}>
     <label htmlFor="Type">
