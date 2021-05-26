@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import getTennant from '../requests/getTennant';
 import SendDingDong from './DingDong';
 //import sendDingDong from './DingDong';
-
+import Collected from './Collection';
 // DingDongCTA props => tenant id
 
 
@@ -11,7 +11,8 @@ const TennantRow = ({tennant}) => {
     return  <tr> <td>{firstname}</td><br/> 
             <td>{lastname}</td><br/> 
             <td>{flat_number}</td><br/>
-            <td><SendDingDong/></td></tr>    
+            <td><SendDingDong setList/></td>   
+            <td><Collected></Collected></td></tr> 
 }
 
 const TenantList = () => {
@@ -31,6 +32,8 @@ const TenantList = () => {
     return (
 <>
         <h1>Notify Tenant</h1>
+
+        <h2>Find Tennant</h2>
 
         <table>
         <tr> 
