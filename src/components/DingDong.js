@@ -8,7 +8,7 @@ import { useForm } from '../hooks/useForm';
 
 const SendDingDong = () => {
 
-    const [{size}, setInput] = useForm({
+    const [{size}, setInput, resetInput] = useForm({
     size: '',
   });
 
@@ -16,6 +16,7 @@ const SendDingDong = () => {
     e.preventDefault()
     newParcel({size});
     console.log(newParcel)
+    resetInput(e);
   }
  
   return (  
