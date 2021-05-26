@@ -6,7 +6,7 @@ import { useForm } from '../hooks/useForm';
 
     
 
-const SendDingDong = () => {
+const SendDingDong = ({tennantId, addParcel}) => {
 
     const [{size}, setInput, resetInput] = useForm({
     size: '',
@@ -14,8 +14,7 @@ const SendDingDong = () => {
 
   const submitForm = (e) => {
     e.preventDefault()
-    newParcel({size});
-    console.log(newParcel)
+    newParcel({size}, tennantId).then(parcel => {addParcel(tennantId, parcel)});
     resetInput(e);
   }
  

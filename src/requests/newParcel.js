@@ -1,17 +1,17 @@
 import axios from "axios";
 
-const newParcel = (parcel) => {
+const newParcel = (parcel, tennantId) => {
     console.log(parcel);
     const data = {
       size: parcel.size,
-      notified: parcel.notified,
     };
-    axios
+    return axios
     .post(
-    "https://ding-dong-backend.herokuapp.com/tennants/:tennantId/packages",
+      `http://localhost:4000/tennants/${tennantId}/packages`,
+    //"https://ding-dong-backend.herokuapp.com/tennants/:tennantId/packages",
     data)
     .then((response) => {
-      console.log(response);
+      return response.data
     })
     .catch((error) => {
       console.log(error);

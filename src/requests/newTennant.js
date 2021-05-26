@@ -11,7 +11,8 @@ const newTennant = (tennant) => {
     };
     axios
     .post(
-    "https://ding-dong-backend.herokuapp.com/tennants",
+      "http://localhost:4000/tennants",
+    //"https://ding-dong-backend.herokuapp.com/tennants",
     data)
     .then((response) => {
       console.log(response);

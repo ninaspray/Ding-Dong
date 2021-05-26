@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import getTennant from '../requests/getTennant';
-import SendDingDong from './DingDong';
+import SendDingDong from './SendDingDong';
 //import sendDingDong from './DingDong';
 import Collected from './Collection';
 // DingDongCTA props => tenant id
 
 
-const TennantRow = ({tennant}) => {
-    const {firstname, lastname, flat_number} = tennant;
+const TennantRow = ({tennant, addParcel}) => {
+    const {firstname, lastname, flat_number, id, packages} = tennant;
+    const filtered = (packages.filter(pack => pack.collected === false)); 
     return  <tr> <td>{firstname}</td><br/> 
             <td>{lastname}</td><br/> 
             <td>{flat_number}</td><br/>
-            <td><SendDingDong setList/></td>   
-            <td><Collected></Collected></td></tr> 
+             {filtered.length === 0 ? <td><SendDingDong tennantId={id} addParcel={addParcel}/></td> : <td><Collected></Collected></td>}
+            </tr> 
 }
 
 const TenantList = () => {
@@ -28,6 +29,16 @@ const TenantList = () => {
             });
     }, [])
 
+const addParcel = (tennantId, parcel) => {
+    
+    setList(prev => prev.map(tennant => {
+        if (tennant.id === tennantId) {
+             tennant.packages.push(parcel); 
+        }
+        return tennant;
+    }))
+
+} 
  
     return (
 <>
@@ -38,7 +49,7 @@ const TenantList = () => {
         <table>
         <tr> 
             <td>
-            {list.map((tennant) => <TennantRow tennant={tennant} key={tennant.id} />)}
+            {list.map((tennant) => <TennantRow tennant={tennant} key={tennant.id} addParcel={addParcel}/>)}
             </td>
         </tr>
         </table>
