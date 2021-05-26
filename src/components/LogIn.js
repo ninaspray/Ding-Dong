@@ -37,34 +37,35 @@ const Login = () => {
         <div className="login">
             <form onSubmit={handleSubmit} className="login__form">
                 <div className="login__input-wrapper">
-                    <label htmlFor="text-input">email</label>
+                    {/* <label htmlFor="text-input">email</label> */}
                     <input
-                        id="text-input"
+                        className="login__input"
                         name="email"
                         type="text"
                         value={email}
-                        placeholder="e-mail"
+                        placeholder="Email."
                         onChange={setInput}
                     />
                 </div>
                 <div className="login__input-wrapper">
-                    <label htmlFor="password-input">password</label>
+                    {/* <label htmlFor="password-input">password</label> */}
                     <input
-                        id="password-input"
+                        className="login__input"
                         name="password"
                         type="password"
                         value={password}
+                        placeholder="Password."
                         onChange={setInput}
                     />
                 </div>
-                {error && <div>{error}</div>}
-                <button type="submit" disabled={loading}>
-                    Log In
+                {error && <div className="login__error">{error}</div>}
+                <button className="login__button" type="submit" disabled={loading}>
+                    Login
                 </button>
+                <div>
+                    <Link className="login__signup" to="/sign-up">Sign Up</Link>
+                </div>
             </form>
-            <div>
-                Need an account? <Link to="/sign-up">Sign Up</Link>
-            </div>
         </div>
     );
 };
