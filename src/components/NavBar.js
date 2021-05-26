@@ -5,7 +5,6 @@ import { useAuth } from '../contexts/AuthContext';
 //styles
 import '../styles/NavBar.css';
 
-
 const NavBar = () => {
   const { currentUser, logout } = useAuth();
   const history = useHistory();
@@ -20,7 +19,7 @@ const NavBar = () => {
     <div className="StyledNavWrap">
       <ul className="StyledNav">
 
-        {currentUser && (
+        {!currentUser && (
           <>
             <li>
               <Link className="navLink" to="/">Home</Link>

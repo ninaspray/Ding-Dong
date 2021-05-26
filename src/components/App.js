@@ -14,7 +14,8 @@ import Signup from './SignUp';
 import { AuthProvider } from '../contexts/AuthContext';
 //import Tennants from './Tennant';
 //<Route exact path="/tennant" component={Tennants}/>
-
+import DingDongLogo from '../Images/DingDongLogo.png';
+import '../styles/App.css';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <NavBar />
           <h2>Ding Dong</h2>
           <div>
-            <img src="../Images/DingDongLogo.png" alt='DingDongLogo' />
+            <img src={DingDongLogo} width='300px' height='350px' alt='DingDongLogo' />
           </div>
         </header>
         <main className="App-content">
@@ -40,7 +41,6 @@ function App() {
         </main>
       </Router>
       <footer className="App-footer">
-        <div>footer goes here</div>
       </footer>
     </AuthProvider>
     );
