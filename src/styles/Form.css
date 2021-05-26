@@ -42,22 +42,23 @@
 
 .form__button {
     display: flex;
-    width: 80%;
+    width: 40%;
     border-radius: 10px;
-    height: 30px;
+    height: 40px;
     align-items: center;
     justify-content: center;
     background-color: skyblue;
     border-style: none;
     margin-top: 20px;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .form__input {
     height: 20px;
     text-align: center;
     border-radius: 10px;
-    width: 80%;
+    width: 40%;
     border-style: solid;
     border-width: 1px;
     border-color: rgb(183 183 183);
@@ -74,4 +75,5 @@
 .form__dropdown {
     min-width: 40px;
     padding: 10px 5px;
+    border-radius: 10px;;
 }
