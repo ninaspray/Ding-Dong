@@ -21,9 +21,9 @@ const NavBar = () => {
 
         {!currentUser && (
           <>
-            {/* <li>
-              <Link className="navLink" to="/home">Your Details</Link>
-            </li> */}
+            <li>
+              <Link className="navLink" to="/">Home</Link>
+            </li> 
             <li>
               <Link className="navLink" to="/create">Create Tennant</Link>
             </li>

@@ -47,3 +47,22 @@ function App() {
   }
 
 export default App;
+
+/*
+list: Phase 1
+  Search: |Diego / 2A|
+
+  | Flat #  | Tenant  | Actions
+  | 1A      | Diego   | [ DingDong ] -> create a package / send email notification
+  | 1B      | Nina    | [ Collected ]
+  | 1C      | Rui     | [ DingDong ]
+  | 2A      | Martyna | [ Collected ]
+  | 2B      | Stu     | [ Collected ]
+  | 2C      | Matt    | [ DingDong ]
+
+  create a package
+
+  [ DingDong ] -> [ small / medium / large] [submit]
+
+ 
+*/

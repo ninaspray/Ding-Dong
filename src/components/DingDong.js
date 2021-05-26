@@ -8,7 +8,7 @@ import { useForm } from '../hooks/useForm';
 
 const SendDingDong = () => {
 
-    const [{size}, setInput] = useForm({
+    const [{size}, setInput, resetInput] = useForm({
     size: '',
   });
 
@@ -16,23 +16,22 @@ const SendDingDong = () => {
     e.preventDefault()
     newParcel({size});
     console.log(newParcel)
+    resetInput(e);
   }
  
   return (  
         <>
-        <h1>   
-        Find Tennant Function
-        </h1>
       
     <form onSubmit={submitForm}>
     <label htmlFor="Type">
-            Parcel Size
+            
     <select
               placeholder="Parcel Size"
               name="size"
               value={size}
               onChange={setInput}
             >
+              <option placeholder="Parcel Size">Parcel Size</option>
              <option value="Small">Small</option>
              <option value="Medium">Medium</option>
              <option value="Large">Large</option>
