@@ -23,13 +23,14 @@ const SendDingDong = () => {
       
     <form onSubmit={submitForm}>
     <label htmlFor="Type">
-            Parcel Size
+            
     <select
               placeholder="Parcel Size"
               name="size"
               value={size}
               onChange={setInput}
             >
+              <option placeholder="Parcel Size">Parcel Size</option>
              <option value="Small">Small</option>
              <option value="Medium">Medium</option>
              <option value="Large">Large</option>

@@ -29,6 +29,8 @@ const TenantList = () => {
 
  
     return (
+<>
+        <h1>Notify Tenant</h1>
 
         <table>
         <tr> 
@@ -37,6 +39,8 @@ const TenantList = () => {
             </td>
         </tr>
         </table>
+
+</>
     );
 }
 
