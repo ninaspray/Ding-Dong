@@ -1,11 +1,11 @@
-.login {
+.form__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-.login__form {
+.form {
     display: flex;
     flex-direction: column;
     min-width: 200px;
@@ -14,14 +14,14 @@
     margin-bottom: 20px;
 }
 
-.login__input-wrapper {
+.form__input-wrapper {
     display: flex;
     min-width: 100%;
     justify-content: center;
     margin-top: 20px;
 }
 
-.login__signup {
+.form__signup {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -32,14 +32,14 @@
     margin-bottom: 20px;
 }
 
-.login__error {
+.form__error {
     color: rgb(99 99 99);
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-.login__button {
+.form__button {
     display: flex;
     width: 50%;
     border-radius: 10px;
@@ -52,7 +52,7 @@
     font-weight: bold;
 }
 
-.login__input {
+.form__input {
     height: 20px;
     text-align: center;
     border-radius: 10px;
@@ -61,4 +61,3 @@
     border-width: 1px;
     border-color: rgb(183 183 183);
 }
-

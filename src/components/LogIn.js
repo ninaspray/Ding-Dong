@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from '../hooks/useForm';
 import { useAuth } from '../contexts/AuthContext';
-import '../styles/LogIn.css'
+import '../styles/Form.css'
 
 const Login = () => {
     const [{ email, password }, setInput] = useForm({
@@ -34,38 +34,40 @@ const Login = () => {
 
 
     return (
-        <div className="login">
-            <form onSubmit={handleSubmit} className="login__form">
-                <div className="login__input-wrapper">
-                    {/* <label htmlFor="text-input">email</label> */}
-                    <input
-                        className="login__input"
-                        name="email"
-                        type="text"
-                        value={email}
-                        placeholder="Email."
-                        onChange={setInput}
-                    />
-                </div>
-                <div className="login__input-wrapper">
-                    {/* <label htmlFor="password-input">password</label> */}
-                    <input
-                        className="login__input"
-                        name="password"
-                        type="password"
-                        value={password}
-                        placeholder="Password."
-                        onChange={setInput}
-                    />
-                </div>
-                {error && <div className="login__error">{error}</div>}
-                <button className="login__button" type="submit" disabled={loading}>
-                    Login
-                </button>
-                <div>
-                    <Link className="login__signup" to="/sign-up">Sign Up</Link>
-                </div>
-            </form>
+        <div className="login__component">
+            <div className="form__wrapper">
+                <form onSubmit={handleSubmit} className="form">
+                    <div className="form__input-wrapper">
+                        {/* <label htmlFor="text-input">email</label> */}
+                        <input
+                            className="form__input"
+                            name="email"
+                            type="text"
+                            value={email}
+                            placeholder="Email."
+                            onChange={setInput}
+                        />
+                    </div>
+                    <div className="form__input-wrapper">
+                        {/* <label htmlFor="password-input">password</label> */}
+                        <input
+                            className="form__input"
+                            name="password"
+                            type="password"
+                            value={password}
+                            placeholder="Password."
+                            onChange={setInput}
+                        />
+                    </div>
+                    {error && <div className="form__error">{error}</div>}
+                    <button className="form__button" type="submit" disabled={loading}>
+                        Login
+                    </button>
+                    <div>
+                        <Link className="form__signup" to="/sign-up">Sign Up</Link>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 };
