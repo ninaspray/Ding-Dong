@@ -8,10 +8,11 @@
 .form {
     display: flex;
     flex-direction: column;
-    min-width: 200px;
+    min-width: 250px;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .form__input-wrapper {
@@ -41,7 +42,7 @@
 
 .form__button {
     display: flex;
-    width: 50%;
+    width: 80%;
     border-radius: 10px;
     height: 30px;
     align-items: center;
@@ -60,4 +61,17 @@
     border-style: solid;
     border-width: 1px;
     border-color: rgb(183 183 183);
+    margin-top: 20px;
+    padding: 15px 5px;
+}
+
+.form__label {
+    padding-right: 10px;
+    color: rgb(99 99 99);
+    padding: 10px;
+}
+
+.form__dropdown {
+    min-width: 40px;
+    padding: 10px 5px;
 }

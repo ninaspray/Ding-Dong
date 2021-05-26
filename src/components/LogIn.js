@@ -37,28 +37,22 @@ const Login = () => {
         <div className="login__component">
             <div className="form__wrapper">
                 <form onSubmit={handleSubmit} className="form">
-                    <div className="form__input-wrapper">
-                        {/* <label htmlFor="text-input">email</label> */}
-                        <input
-                            className="form__input"
-                            name="email"
-                            type="text"
-                            value={email}
-                            placeholder="Email."
-                            onChange={setInput}
-                        />
-                    </div>
-                    <div className="form__input-wrapper">
-                        {/* <label htmlFor="password-input">password</label> */}
-                        <input
-                            className="form__input"
-                            name="password"
-                            type="password"
-                            value={password}
-                            placeholder="Password."
-                            onChange={setInput}
-                        />
-                    </div>
+                    <input
+                        className="form__input"
+                        name="email"
+                        type="text"
+                        value={email}
+                        placeholder="Email."
+                        onChange={setInput}
+                    />
+                    <input
+                        className="form__input"
+                        name="password"
+                        type="password"
+                        value={password}
+                        placeholder="Password."
+                        onChange={setInput}
+                    />
                     {error && <div className="form__error">{error}</div>}
                     <button className="form__button" type="submit" disabled={loading}>
                         Login
