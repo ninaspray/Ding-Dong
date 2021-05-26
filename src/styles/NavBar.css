@@ -8,13 +8,15 @@
 .StyledNavWrap:after {
     position: absolute;
     top: 100%;
+    left: 0;
+    right: 0;
     content: "";
     display: block;
     width: 100%;
     height: 100px;
     background-image: url('../Images/waveedit.png');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 .StyledNav {
@@ -32,23 +34,4 @@
 }
 .navbar-links-item {
     padding-right: 5rem;
-}
-
-.Footer {
-    position: relative;
-    height: auto;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-    background-image: url('../Images/footer.png');
-}
-.Footer::after{
-    position: absolute;
-    bottom: 0;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
