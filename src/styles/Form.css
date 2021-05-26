@@ -1,27 +1,28 @@
-.login {
+.form__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-.login__form {
+.form {
     display: flex;
     flex-direction: column;
-    min-width: 200px;
+    min-width: 250px;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
-.login__input-wrapper {
+.form__input-wrapper {
     display: flex;
     min-width: 100%;
     justify-content: center;
     margin-top: 20px;
 }
 
-.login__signup {
+.form__signup {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -32,16 +33,16 @@
     margin-bottom: 20px;
 }
 
-.login__error {
+.form__error {
     color: rgb(99 99 99);
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-.login__button {
+.form__button {
     display: flex;
-    width: 50%;
+    width: 80%;
     border-radius: 10px;
     height: 30px;
     align-items: center;
@@ -52,7 +53,7 @@
     font-weight: bold;
 }
 
-.login__input {
+.form__input {
     height: 20px;
     text-align: center;
     border-radius: 10px;
@@ -60,5 +61,17 @@
     border-style: solid;
     border-width: 1px;
     border-color: rgb(183 183 183);
+    margin-top: 20px;
+    padding: 15px 5px;
 }
 
+.form__label {
+    padding-right: 10px;
+    color: rgb(99 99 99);
+    padding: 10px;
+}
+
+.form__dropdown {
+    min-width: 40px;
+    padding: 10px 5px;
+}

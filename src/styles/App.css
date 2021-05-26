@@ -5,6 +5,7 @@ html, body {
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
+
 *{
   box-sizing: border-box;
 }
@@ -29,6 +30,7 @@ html, body {
 .App-content{
   padding: 20px;
   width: 100%;
+  max-width: 1080px;
 }
 
 .App-footer{
