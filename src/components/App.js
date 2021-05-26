@@ -17,6 +17,7 @@ import { AuthProvider } from '../contexts/AuthContext';
 import DingDongLogo from '../Images/DingDongLogo.png';
 import '../styles/App.css';
 import '../styles/Footer.css';
+import '../styles/Logo.css';
 
 function App() {
   return (
@@ -25,8 +26,8 @@ function App() {
         <Router>
           <header className="App-header">
             <NavBar />
-            <h2>Ding Dong</h2>
-            <div>
+            <div className='logo'>
+                <h2>Ding Dong</h2>
               <img src={DingDongLogo} width='300px' height='350px' alt='DingDongLogo' />
             </div>
           </header>
