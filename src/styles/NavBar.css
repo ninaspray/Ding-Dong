@@ -24,15 +24,33 @@
     list-style: none;
     display: flex;
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
     float: right;
 }
 
 .StyledNav li {
     padding: 0 10px;
+    cursor: pointer;
 }
+
 .StyledNav a {
     color: #444341;
 }
+
+a:hover {
+    background-color:#fabadd;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+a:link {
+    text-decoration: none;
+}
+
 .navbar-links-item {
     padding-right: 5rem;
 }
