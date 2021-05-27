@@ -23,18 +23,13 @@ const Collection = () => {
         <>
       
     <form onSubmit={submitForm}>
-    <label htmlFor="Type">
-            
-    <select
-              placeholder="Parcel Size"
-              name="Collected"
-              value={collected}
-              onChange={setInput}
+    <label htmlFor="Type"
+           placeholder="Parcel Size"
+           name="Collected"
+           value={collected}
+           onChange={setInput}
             >
-              <option placeholder="Parcel Collected">Parcel Collected</option>
-             <option value="Collected">Collected</option>
-            </select>
-            </label>        
+      </label>        
 
     <button type="submit">Collected</button>
     </form>
