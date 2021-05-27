@@ -30,7 +30,7 @@ function App() {
               <img src={DingDongLogo} width='300px' height='350px' alt='DingDongLogo' />
             </div>
           </header>
-          <main className="App-content">
+          <main className="App-content" className='red-input'>
             <Switch>
               <Route exact path="/" component={HomePage} />
               {/* <Route exact path="/home" component={accountDetails}/> */}
