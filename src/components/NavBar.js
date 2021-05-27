@@ -19,7 +19,7 @@ const NavBar = () => {
     <div className="StyledNavWrap">
       <ul className="StyledNav">
 
-        {!currentUser && (
+        {currentUser && (
           <>
             <li>
               <Link className="navLink" to="/">Home</Link>
