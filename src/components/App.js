@@ -26,7 +26,7 @@ function App() {
         <Router>
           <header className="App-header">
             <NavBar />
-            <div className='logo'>
+            <div className="logo">
                 <h2>Ding Dong</h2>
               <img src={DingDongLogo} width='300px' height='350px' alt='DingDongLogo' />
             </div>

@@ -4,6 +4,7 @@ export const useForm = initial => {
     const [values, setValues] = useState(initial);
 
     const setValuesHandler = event => {
+        event.persist();
         if (event.target.type === 'checkbox') {
             setValues(prev => ({
                 ...prev,

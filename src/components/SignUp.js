@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 //custom Hooks
-import {useForm} from '../hooks/useForm';
-import {useAuth } from '../contexts/AuthContext';
+import { useForm } from '../hooks/useForm';
+import { useAuth } from '../contexts/AuthContext';
 
 
 const Signup = () => {
-    const [{email, password, passwordConfirm }, setInput] = useForm({
+    const [{email, password, passwordConfirm }, setInput ] = useForm({
         email: '',
         password: '',
         passwordConfirm: '',
@@ -21,6 +21,7 @@ const [loading, setLoading] = useState(false);
 
 const handleSubmit = async event => {
     event.preventDefault();
+    event.persist();
     console.log(email, password);
     if (password !== passwordConfirm){
      setError('Passwords do not match');   
