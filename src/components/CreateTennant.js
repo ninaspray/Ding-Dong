@@ -33,7 +33,7 @@ const CreateTennant = () => {
             className="form__input"
             type="text"
             name="firstname"
-            placeholder="First name"
+            placeholder="First Name."
             value={firstname}
             onChange={setInput}
           />
@@ -41,7 +41,7 @@ const CreateTennant = () => {
             className="form__input"
             type="text"
             name="lastname"
-            placeholder="Last name"
+            placeholder="Last Name."
             value={lastname}
             onChange={setInput}
           />
@@ -49,7 +49,7 @@ const CreateTennant = () => {
             className="form__input"
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Email."
             value={email}
             onChange={setInput}
           />
@@ -57,7 +57,7 @@ const CreateTennant = () => {
             className="form__input"
             type="telephone"
             name="telephone"
-            placeholder="Telephone"
+            placeholder="Telephone."
             value={telephone}
             onChange={setInput}
           />
