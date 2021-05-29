@@ -1,6 +1,6 @@
 import React from "react";
 import newTennant from '../requests/newTennant';
-import '../styles/Form.css'
+import '../styles/Form.css';
 
 //custom Hooks
 import { useForm } from '../hooks/useForm';

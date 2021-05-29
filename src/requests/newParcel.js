@@ -7,9 +7,7 @@ const newParcel = (parcel, tennantId) => {
     };
     return axios
     .post(
-      `http://localhost:4000/tennants/${tennantId}/packages`,
-    //"https://ding-dong-backend.herokuapp.com/tennants/:tennantId/packages",
-    data)
+      "https://ding-dong-backend.herokuapp.com/tennants/:tennantId/packages", data)
     .then((response) => {
       return response.data
     })

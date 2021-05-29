@@ -1,10 +1,11 @@
 .logo {
-    margin-top: 100px;
+    margin-top: 5vh;
+    margin-bottom: 4vh;
     position: relative;
     z-index: 1;
-}
-.logo h2 {
-    font-size: 50px;
-    align-self: center;
-    font-weight: 300;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
