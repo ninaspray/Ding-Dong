@@ -12,7 +12,7 @@ const TennantRow = ({tennant, addParcel}) => {
     return  <tr> <td>{firstname}</td><br/> 
             <td>{lastname}</td><br/> 
             <td>{flat_number}</td><br/>
-             {filtered.length === 0 ? <td><SendDingDong tennantId={id} addParcel={addParcel}/></td> : <td><Collected></Collected></td>}
+             {filtered.length === 0 ? <td><SendDingDong tennantId={id} addParcel={addParcel}/></td> : <td><Collected packages={filtered}></Collected></td>}
             </tr> 
 }
 
