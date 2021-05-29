@@ -14,7 +14,7 @@ import Signup from './SignUp';
 import { AuthProvider } from '../contexts/AuthContext';
 //import Tennants from './Tennant';
 //<Route exact path="/tennant" component={Tennants}/>
-import DingDongLogo from '../Images/DingDongLogo.png';
+import DingDongLogo from '../Images/TopPick_transparent_2.png'
 import '../styles/App.css';
 import '../styles/Footer.css';
 import '../styles/Logo.css';
@@ -26,12 +26,11 @@ function App() {
         <Router>
           <header className="App-header">
             <NavBar />
-            <div className="logo">
-                <h2>Ding Dong</h2>
-              <img src={DingDongLogo} width='300px' height='350px' alt='DingDongLogo' />
+            <div className='logo'>
+              <img src={DingDongLogo} width='400px' height='220px' alt='DingDongLogo' />
             </div>
           </header>
-          <main className="App-content" className='red-input'>
+          <main className="App-content">
             <Switch>
               <Route exact path="/" component={HomePage} />
               {/* <Route exact path="/home" component={accountDetails}/> */}
