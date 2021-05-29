@@ -12,7 +12,7 @@ const TennantRow = ({tennant, addParcel}) => {
     return  <tr> <td>{firstname}</td><br/> 
             <td>{lastname}</td><br/> 
             <td>{flat_number}</td><br/>
-             {filtered.length === 0 ? <td><SendDingDong tennantId={id} addParcel={addParcel}/></td> : <td><Collected packages={filtered}></Collected></td>}
+             {filtered.length === 0 ? <td><SendDingDong tennantId={id} addParcel={addParcel}/></td> : <td><Collected packages={filtered} /*updateCollection={updateCollection}*/></Collected></td>}
             </tr> 
 }
 
@@ -37,8 +37,17 @@ const addParcel = (tennantId, parcel) => {
         }
         return tennant;
     }))
-
-} 
+ }
+ 
+// const updateCollection = () => {
+//         getTennant()
+//            .then((response) => {
+//                setList(response.data);
+//            })
+//            .catch((error) => {
+//                console.error(error)
+//            });    
+// }
  
     return (
 <>
@@ -49,7 +58,7 @@ const addParcel = (tennantId, parcel) => {
         <table>
         <tr> 
             <td>
-            {list.map((tennant) => <TennantRow tennant={tennant} key={tennant.id} addParcel={addParcel}/>)}
+            {list.map((tennant) => <TennantRow tennant={tennant} key={tennant.id} addParcel={addParcel} /*updateCollection={updateCollection}*//>)}
             </td>
         </tr>
         </table>
