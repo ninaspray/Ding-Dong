@@ -1,69 +1,68 @@
 import React from "react";
-import newTennant from '../requests/newTennant';
-import '../styles/Form.css'
+import newTennant from "../requests/newTennant";
+import "../styles/Form.css";
 
 //custom Hooks
-import { useForm } from '../hooks/useForm';
-
-
+import { useForm } from "../hooks/useForm";
 
 const CreateTennant = () => {
-
-    const [{firstname, lastname, email, telephone, flat_number }, setInput, resetInput] = useForm({
-    firstname: '',
-    lastname: '',
-    email: '',
-    telephone: '',
-    flat_number: '',
+  const [
+    { firstname, lastname, email, telephone, flat_number },
+    setInput,
+    resetInput,
+  ] = useForm({
+    firstname: "",
+    lastname: "",
+    email: "",
+    telephone: "",
+    flat_number: "",
   });
 
   const submitForm = (e) => {
-    e.preventDefault()
-    newTennant({firstname, lastname, email, telephone, flat_number });
+    e.preventDefault();
+    newTennant({ firstname, lastname, email, telephone, flat_number });
     resetInput(e);
     //console.log("calling",firstname, lastname, email, telephone, flat_number)
-  }
- 
+  };
 
-  return ( 
-
+  return (
     <div className="form__wrapper">
-      <form className="form" onSubmit={submitForm} >
-          <input
-            className="form__input"
-            type="text"
-            name="firstname"
-            placeholder="First Name."
-            value={firstname}
-            onChange={setInput}
-          />
-          <input
-            className="form__input"
-            type="text"
-            name="lastname"
-            placeholder="Last Name."
-            value={lastname}
-            onChange={setInput}
-          />
-          <input
-            className="form__input"
-            type="email"
-            name="email"
-            placeholder="Email."
-            value={email}
-            onChange={setInput}
-          />
-          <input
-            className="form__input"
-            type="telephone"
-            name="telephone"
-            placeholder="Telephone."
-            value={telephone}
-            onChange={setInput}
-          />
+      <form className="form" onSubmit={submitForm}>
+        <input
+          className="form__input"
+          type="text"
+          name="firstname"
+          placeholder="First Name."
+          value={firstname}
+          onChange={setInput}
+        />
+        <input
+          className="form__input"
+          type="text"
+          name="lastname"
+          placeholder="Last Name."
+          value={lastname}
+          onChange={setInput}
+        />
+        <input
+          className="form__input"
+          type="email"
+          name="email"
+          placeholder="Email."
+          value={email}
+          onChange={setInput}
+        />
+        <input
+          className="form__input"
+          type="telephone"
+          name="telephone"
+          placeholder="Telephone."
+          value={telephone}
+          onChange={setInput}
+        />
         <div className="form__input-wrapper">
           <label className="form__label" htmlFor="Type">
-              Flat Number:
+            Flat Number:
           </label>
           <select
             className="form__dropdown"
@@ -85,12 +84,12 @@ const CreateTennant = () => {
             <option value="10J">10J</option>
           </select>
         </div>
-        <button className="form__button" type="submit">Submit</button>
+        <button className="form__button" type="submit">
+          Submit
+        </button>
       </form>
     </div>
-  ); 
+  );
 };
- 
 
 export default CreateTennant;
-

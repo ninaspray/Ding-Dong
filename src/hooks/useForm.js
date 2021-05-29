@@ -1,27 +1,27 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-export const useForm = initial => {
-    const [values, setValues] = useState(initial);
+export const useForm = (initial) => {
+  const [values, setValues] = useState(initial);
 
-    const setValuesHandler = event => {
-        event.persist();
-        if (event.target.type === 'checkbox') {
-            setValues(prev => ({
-                ...prev,
-                [event.target.name]: event.target.checked,
-            }));
-        } else {
-            setValues(prev => ({
-                ...prev,
-                [event.target.name]: event.target.value,
-            }));
-        }
-    };
+  const setValuesHandler = (event) => {
+    event.persist();
+    if (event.target.type === "checkbox") {
+      setValues((prev) => ({
+        ...prev,
+        [event.target.name]: event.target.checked,
+      }));
+    } else {
+      setValues((prev) => ({
+        ...prev,
+        [event.target.name]: event.target.value,
+      }));
+    }
+  };
 
-    const resetValuesHandler = event => {
-        event.preventDefault();
-        setValues(initial);
-    };
+  const resetValuesHandler = (event) => {
+    event.preventDefault();
+    setValues(initial);
+  };
 
-    return [values, setValuesHandler, resetValuesHandler];
+  return [values, setValuesHandler, resetValuesHandler];
 };
