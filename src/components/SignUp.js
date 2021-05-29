@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import '../styles/Form.css';
 
 //custom Hooks
 import { useForm } from '../hooks/useForm';
@@ -39,45 +40,47 @@ const handleSubmit = async event => {
         }
     }
 };
+
 return (
-    <>
-    <form onSubmit={handleSubmit}>
-        <div>
-            <input
-            name="email"
-            type="text"
-            value={email}
-            placeholder="e-mail"
-            onChange={setInput}
-            />
+    <div className="signup__component">
+        <div className="form__wrapper">
+            <form className="form" onSubmit={handleSubmit}>
+                <input
+                    className="form__input"
+                    name="email"
+                    type="text"
+                    value={email}
+                    placeholder="Email."
+                    onChange={setInput}
+                />
+                <input
+                    className="form__input"
+                    id="password"
+                    name="password"
+                    type="password"
+                    placeholder="Password."
+                    value={password}
+                    onChange={setInput}
+                />
+                <input
+                    className="form__input"
+                    id="passwordConfirm"
+                    name="passwordConfirm"
+                    type="password"
+                    placeholder="Confirm Password."
+                    value={passwordConfirm}
+                    onChange={setInput}
+                />
+                {error && <div className="form__error">{error}</div>}
+                <button className="form__button" type="submit" disabled={loading}>
+                    Sign Up
+                </button>
+                <div>
+                    <Link className="form__signup-login" to="/">Log in</Link>
+                </div>
+            </form>
         </div>
-        <div>
-            <input
-                id="password"
-                name="password"
-                type="password"
-                value={password}
-                onChange={setInput}
-            />
-        </div>
-        <div>
-            <input
-                id="passwordConfirm"
-                name="passwordConfirm"
-                type="password"
-                value={passwordConfirm}
-                onChange={setInput}
-            />
-        </div>
-        {error && <div>{error}</div>}
-        <button type="submit" disabled={loading}>
-            Sign Up
-        </button>
-        <div>
-        Already have an account? <Link to="/">Log in</Link>
-        </div>
-    </form>
-    </>
+    </div>
     );
 };
 
