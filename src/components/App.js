@@ -26,9 +26,14 @@ function App() {
                 height="220px"
                 alt="DingDongLogo"
               />
+            <div className='logo'>
+              {/* <img src={DingDongLogo} width='400px' height='220px' alt='DingDongLogo' /> */}
             </div>
           </header>
           <main className="App-content">
+            <div className='logo'>
+              <img src={DingDongLogo} width='400px' height='220px' alt='DingDongLogo' />
+            </div>
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/create" component={CreateTennant} />
