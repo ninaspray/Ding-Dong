@@ -6,32 +6,31 @@ import { useForm } from '../hooks/useForm';
 
     
 
-const Collection = () => {
+const Collection = (packages) => {
 
     const [{collected}, setInput, resetInput] = useForm({
-    collected: '',
+    collected: true,
   });
 
   const submitForm = (e) => {
     e.preventDefault()
-    updatePackage({collected});
-    console.log(updatePackage)
+    console.log(packages);
+    console.log(packages[0]);
+    updatePackage(packages.packages[0].id);
+    //console.log(updatePackage)
     resetInput(e);
   }
  
   return (  
         <>
-      
-    <form onSubmit={submitForm}>
-    <label htmlFor="Type"
-           placeholder="Parcel Size"
-           name="Collected"
-           value={collected}
-           onChange={setInput}
-            >
-      </label>        
-
-    <button type="submit">Collected</button>
+    <form onSubmit={submitForm}>       
+    <button
+              placeholder="Parcel Size"
+              name="Collected"
+              value={collected}
+              onChange={setInput}     
+              type="submit">
+                Collected</button >
     </form>
     </>
   );
