@@ -12,11 +12,11 @@ const TennantRow = ({ tennant, addParcel }) => {
     <tr>
       {" "}
       <td>{firstname}</td>
-      <br />
       <td>{lastname}</td>
-      <br />
       <td>{flat_number}</td>
-      <br />
+      {/* <br />
+      <td>{telephone}</td>
+      <br /> */}
       {filtered.length === 0 ? (
         <td>
           <SendDingDong tennantId={id} addParcel={addParcel} />
@@ -69,7 +69,6 @@ const TenantList = () => {
   return (
     <>
       <h1>Notify Tenant</h1>
-
       <h2>Find Tennant</h2>
 
       <table>
@@ -79,7 +78,7 @@ const TenantList = () => {
               <TennantRow
                 tennant={tennant}
                 key={tennant.id}
-                addParcel={addParcel} /*updateCollection={updateCollection}*/
+                addParcel={addParcel}
               />
             ))}
           </td>
