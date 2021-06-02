@@ -50,7 +50,7 @@ td {
     height: 40px;
     align-items: center;
     justify-content: center;
-    background-color: #edbb3e;
+    background-color: #8bdbfe;
     border-style: none;
     margin-top: 20px;
     font-weight: bold;
@@ -58,4 +58,12 @@ td {
     min-width: 200px;
     padding-bottom: 5px;
     margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.table__dropdown {
+    min-width: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
 }

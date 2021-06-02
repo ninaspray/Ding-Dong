@@ -24,6 +24,7 @@ const SendDingDong = ({ tennantId, addParcel }) => {
       <form onSubmit={submitForm}>
         <label htmlFor="Type">
           <select
+            className="table__dropdown"
             placeholder="Parcel Size"
             name="size"
             value={size}

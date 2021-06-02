@@ -1,9 +1,10 @@
 .StyledNavWrap {
     position: relative;
-    height: 15vh;
+    display: flex;
+    height: 12vh;
     width: 100%;
-    padding: 20px;
     background-color: #edbb3e;
+    justify-content: center;
 }
 
 .StyledNavWrap:after {
@@ -22,20 +23,24 @@
 }
 
 .StyledNav {
+    padding-top: 20px;
     list-style: none;
     display: flex;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    float: right;
+    align-items: center;
+    justify-content: center;
 }
 
 .StyledNav li {
-    padding: 0 10px;
+    /* padding: 0 10px; */
     cursor: pointer;
 }
 
 .StyledNav a {
     color: #444341;
+    margin: 10px;
+    display: block;
 }
 
 a:hover {
@@ -50,8 +55,18 @@ a:hover {
 
 a:link {
     text-decoration: none;
+    font-size: 30px;
+    padding: 30px;
+    color: rgb(99 99 99);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .navbar-links-item {
     padding-right: 5rem;
+}
+
+ul {
+    padding: 0px;
 }

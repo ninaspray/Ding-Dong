@@ -53,6 +53,7 @@
     font-weight: bold;
     font-size: 18px;
     min-width: 230px;
+    cursor: pointer;
 }
 
 .form__input {
@@ -77,5 +78,6 @@
 .form__dropdown {
     min-width: 40px;
     padding: 10px 5px;
-    border-radius: 10px;;
+    border-radius: 10px;
+    cursor: pointer;
 }
