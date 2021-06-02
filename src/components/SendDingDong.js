@@ -1,6 +1,7 @@
 import React from "react";
 import newParcel from "../requests/newParcel";
 import newMessage from "../requests/sendMessage";
+import "../styles/Table.css";
 
 //custom Hooks
 import { useForm } from "../hooks/useForm";
@@ -19,7 +20,7 @@ const SendDingDong = ({ tennantId, addParcel }) => {
   };
 
   return (
-    <>
+    <div>
       <form onSubmit={submitForm}>
         <label htmlFor="Type">
           <select
@@ -34,12 +35,12 @@ const SendDingDong = ({ tennantId, addParcel }) => {
             <option value="Large">Large</option>
           </select>
         </label>
-
-        <button type="submit" onClick={() => newMessage(tennantId)}>
-          Send Ding Dong
+        <span> </span>
+        <button className="table__button" type="submit" onClick={() => newMessage(tennantId)}>
+          Send DingDong
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

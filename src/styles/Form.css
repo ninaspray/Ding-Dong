@@ -47,11 +47,12 @@
     height: 40px;
     align-items: center;
     justify-content: center;
-    background-color: skyblue;
+    background-color: #8bdbfe;
     border-style: none;
     margin-top: 20px;
     font-weight: bold;
     font-size: 18px;
+    min-width: 230px;
 }
 
 .form__input {

@@ -4,30 +4,25 @@ import SendDingDong from "./SendDingDong";
 //import sendDingDong from './DingDong';
 import Collected from "./Collection";
 // DingDongCTA props => tenant id
+import "../styles/Table.css";
 
 const TennantRow = ({ tennant, addParcel }) => {
   const { firstname, lastname, flat_number, id, packages } = tennant;
   const filtered = packages.filter((pack) => pack?.collected === false);
   return (
     <tr>
-      {" "}
       <td>{firstname}</td>
-      <br />
       <td>{lastname}</td>
-      <br />
       <td>{flat_number}</td>
-      <br />
-      {filtered.length === 0 ? (
-        <td>
-          <SendDingDong tennantId={id} addParcel={addParcel} />
-        </td>
-      ) : (
-        <td>
-          <Collected
-            packages={filtered} /*updateCollection={updateCollection}*/
-          ></Collected>
-        </td>
-      )}
+      <td className="table__send-dingdong">
+        {filtered.length === 0 ? (
+            <SendDingDong tennantId={id} addParcel={addParcel} />
+        ) : (
+            <Collected
+              packages={filtered} /*updateCollection={updateCollection}*/
+            ></Collected>
+        )}
+      </td>
     </tr>
   );
 };
@@ -67,25 +62,27 @@ const TenantList = () => {
   // }
 
   return (
-    <>
-      <h1>Notify Tenant</h1>
-
-      <h2>Find Tennant</h2>
-
-      <table>
-        <tr>
-          <td>
-            {list.map((tennant) => (
-              <TennantRow
-                tennant={tennant}
-                key={tennant.id}
-                addParcel={addParcel} /*updateCollection={updateCollection}*/
-              />
-            ))}
-          </td>
-        </tr>
+    <div className="table__wrapper">
+      <table id="table__send-dingdong">
+        <thead>
+          <tr className="table__row-head">
+            <th>First Name</th>
+            <th>Surname</th>
+            <th>Apartment</th>
+            <th>Notify</th>
+          </tr>
+        </thead>
+        <tbody>
+          {list.map((tennant) => (
+            <TennantRow
+              tennant={tennant}
+              key={tennant.id}
+              addParcel={addParcel} /*updateCollection={updateCollection}*/
+            />
+          ))}
+        </tbody>
       </table>
-    </>
+    </div>
   );
 };
 
