@@ -6,7 +6,7 @@ const newMessage = (tennantId) => {
   };
   axios
     .post(
-      // "http://localhost:4000/sendsms",
+      //"http://localhost:4000/sendsms",
       "https://ding-dong-backend.herokuapp.com/sendsms",
       data
     )

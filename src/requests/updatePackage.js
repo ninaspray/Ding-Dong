@@ -6,7 +6,10 @@ const updatePackage = (packageId) => {
     collected: true,
   };
   return axios
-    .patch(`https://ding-dong-backend.herokuapp.com/packages/${packageId}`, data)
+    .patch(
+      `https://ding-dong-backend.herokuapp.com/packages/${packageId}`,
+      data
+    )
     .then((response) => {
       return response.data;
     })
