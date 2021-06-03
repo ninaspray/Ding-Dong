@@ -60,6 +60,10 @@ td {
     cursor: pointer;
 }
 
+.table__button:hover {
+    background-color: #fabadd;
+}
+
 .table__dropdown {
     min-width: 40px;
     padding: 5px;

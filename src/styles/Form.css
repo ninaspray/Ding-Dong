@@ -56,6 +56,10 @@
     cursor: pointer;
 }
 
+.form__button:hover {
+    background-color: #fabadd;
+}
+
 .form__input {
     height: 20px;
     text-align: center;
