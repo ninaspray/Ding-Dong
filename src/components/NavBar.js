@@ -21,8 +21,13 @@ const NavBar = () => {
         {currentUser && (
           <>
             <li>
+              <Link className="navLink" to="/about-us">
+                About
+              </Link>
+            </li>
+            <li>
               <Link className="navLink" to="/">
-                Home
+                Send Ding Dong
               </Link>
             </li>
             <li>
@@ -30,11 +35,7 @@ const NavBar = () => {
                 Create Tennant
               </Link>
             </li>
-            <li>
-              <Link className="navLink" to="/about-us">
-                About Us
-              </Link>
-            </li>
+
             <li>
               <Link to="/" onClick={handleLogout}>
                 Log out
