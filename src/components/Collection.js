@@ -1,5 +1,6 @@
 import React from "react";
 import updatePackage from "../requests/updatePackage";
+import "../styles/Table.css";
 
 //custom Hooks
 import { useForm } from "../hooks/useForm";
@@ -18,9 +19,10 @@ const Collection = (packages) => {
   };
 
   return (
-    <>
+    <div className="table__wrapper">
       <form onSubmit={submitForm}>
         <button
+          className="table__button"
           placeholder="Parcel Size"
           name="Collected"
           value={collected}
@@ -30,7 +32,7 @@ const Collection = (packages) => {
           Collected
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

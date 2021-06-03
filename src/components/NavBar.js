@@ -21,18 +21,18 @@ const NavBar = () => {
         {currentUser && (
           <>
             <li>
-              <Link className="navLink" to="/about-us">
-                About
-              </Link>
-            </li>
-            <li>
               <Link className="navLink" to="/">
-                Send Ding Dong
+                DingDong
               </Link>
             </li>
             <li>
               <Link className="navLink" to="/create">
-                Create Tennant
+                Add Tennant
+              </Link>
+            </li>
+            <li>
+              <Link className="navLink" to="/about-us">
+                About
               </Link>
             </li>
 
