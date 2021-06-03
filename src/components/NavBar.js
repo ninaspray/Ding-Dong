@@ -27,7 +27,7 @@ const NavBar = () => {
             </li>
             <li>
               <Link className="navLink" to="/create">
-                Create Tennant
+                Add Tennant
               </Link>
             </li>
             <li>
