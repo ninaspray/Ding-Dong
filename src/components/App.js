@@ -30,7 +30,9 @@ function App() {
                 height="220px"
                 alt="DingDongLogo"
               />
-          </div>
+
+            </div>
+
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/create" component={CreateTennant} />

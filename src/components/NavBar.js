@@ -22,19 +22,21 @@ const NavBar = () => {
           <>
             <li>
               <Link className="navLink" to="/">
-                Home
+                DingDong
               </Link>
             </li>
             <li>
               <Link className="navLink" to="/create">
-                Create Tennant
+                Add Tennant
               </Link>
             </li>
             <li>
               <Link className="navLink" to="/about-us">
-                About Us
+
+                About
               </Link>
             </li>
+
             <li>
               <Link to="/" onClick={handleLogout}>
                 Log out
