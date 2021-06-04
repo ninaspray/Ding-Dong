@@ -27,19 +27,20 @@ html, body {
   font-size: calc(10px + 2vmin);
 }
 
-.App-content{
+.App-content {
   padding: 20px;
   width: 100%;
   max-width: 1080px;
 }
 
-.App-footer{
+.App-footer {
   padding: 20px;
   min-height: 30vh;
   width: 100%;
   background-image: url('../Images/footer2.png');
   background-size: 100% 100%;
 }
+
 
 @media only screen and (max-width: 960px) {
   .main {

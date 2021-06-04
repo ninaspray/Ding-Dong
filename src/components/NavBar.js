@@ -31,6 +31,11 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
+              <Link className="navLink" to="/about-us">
+                About Us
+              </Link>
+            </li>
+            <li>
               <Link to="/" onClick={handleLogout}>
                 Log out
               </Link>
