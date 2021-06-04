@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import getTennant from "../requests/getTennant";
+import SendDingDong from "./SendDingDong";
+//import sendDingDong from './DingDong';
+import Collected from "./Collection";
+// DingDongCTA props => tenant id
 import TennantRow from "./TennantRow";
 import "../styles/Table.css";
 
