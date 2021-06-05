@@ -10,6 +10,7 @@ const newMessage = (tennantId) => {
     data: data,
     headers: {
       "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
     },
   })
     .then((response) => {
