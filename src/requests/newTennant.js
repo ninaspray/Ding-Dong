@@ -10,11 +10,7 @@ const newTennant = (tennant) => {
     flat_number: tennant.flat_number,
   };
   axios
-    .post(
-      //"http://localhost:4000/tennants",
-      "https://ding-dong-backend.herokuapp.com/tennants",
-      data
-    )
+    .post("https://ding-dong-backend.herokuapp.com/tennants", data)
     .then((response) => {
       console.log(response);
     })

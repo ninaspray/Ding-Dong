@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const getTennant = async () => {
-
   const cors = require("cors");
   const path = `https://ding-dong-backend.herokuapp.com/tennants`;
 
