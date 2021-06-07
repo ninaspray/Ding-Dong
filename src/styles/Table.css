@@ -34,6 +34,7 @@ td {
     align-items: center;
     align-content: center;
     font-size: 18px;
+    color: #444341;
 }
 
 .table__send-dingdong {
@@ -58,10 +59,12 @@ td {
     min-width: 160px;
     margin-bottom: 5px;
     cursor: pointer;
+    color: #444341;
 }
 
 .table__button:hover {
     background-color: #fabadd;
+    color: black;
 }
 
 .table__dropdown {
