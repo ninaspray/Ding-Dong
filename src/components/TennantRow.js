@@ -5,6 +5,7 @@ import Collected from "./Collection";
 const TennantRow = ({ tennant, addParcel }) => {
   const { firstname, lastname, flat_number, id, packages } = tennant;
   const filtered = packages.filter((pack) => pack?.collected === false);
+
   return (
     <tr>
       {" "}
