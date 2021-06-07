@@ -4,12 +4,15 @@ const newMessage = (tennantId) => {
   const data = {
     tennantId: tennantId,
   };
-  axios
-    .post(
-      //"http://localhost:4000/sendsms",
-      "https://ding-dong-backend.herokuapp.com/sendsms",
-      data
-    )
+  axios({
+    method: "post",
+    url: "https://ding-dong-backend.herokuapp.com/sendsms",
+    data: data,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    },
+  })
     .then((response) => {
       console.log(response);
     })
