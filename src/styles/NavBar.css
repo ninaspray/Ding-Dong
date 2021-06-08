@@ -4,7 +4,6 @@
     height: 13vh;
     width: 100%;
     background-color: #edbb3e;
-    /* justify-content: flex-end; */
     justify-content: center;
 }
 
@@ -39,9 +38,9 @@
 }
 
 .StyledNav a {
-    color: rgb(99 99 99);
+    /* color: #444341;
     margin: 20px;
-    display: block;
+    display: block; */
 }
 
 a:hover {
@@ -55,7 +54,10 @@ a:hover {
     color: black;
   }
 
-a:link {
+.navLink {
+    color: #444341;
+    margin: 20px;
+    display: block;
     text-decoration: none;
     font-size: 30px;
     padding: 10px;
@@ -66,6 +68,17 @@ a:link {
 
 .navbar-links-item {
     padding-right: 5rem;
+}
+
+.navLink-active {
+    color: black;
+    background-color:#fabadd;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-topright: 20px;
+    -moz-border-radius-bottomright: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
 }
 
 ul {

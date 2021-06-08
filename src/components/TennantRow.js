@@ -7,7 +7,6 @@ const TennantRow = ({ tennant, addParcel }) => {
   const filtered = packages.filter((pack) => pack?.collected === false);
   return (
     <tr>
-      {" "}
       <td>{firstname}</td>
       <td>{lastname}</td>
       <td>{flat_number}</td>
