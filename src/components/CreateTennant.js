@@ -22,7 +22,7 @@ const CreateTennant = () => {
     e.preventDefault();
     newTennant({ firstname, lastname, email, telephone, flat_number });
     resetInput(e);
-    //console.log("calling",firstname, lastname, email, telephone, flat_number)
+    console.log("Tenant has been added!");
   };
 
   return (

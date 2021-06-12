@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 import HomePage from "./HomePage";
 import CreateTennant from "./CreateTennant";
+import AboutUs from "./AboutUs";
 import Signup from "./SignUp";
 import { AuthProvider } from "../contexts/AuthContext";
 import DingDongLogo from "../Images/TopPick_transparent_2.png";
@@ -29,11 +30,14 @@ function App() {
                 height="220px"
                 alt="DingDongLogo"
               />
+
             </div>
+
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/create" component={CreateTennant} />
               <Route exact path="/sign-up" component={Signup} />
+              <Route exact path="/about-us" component={AboutUs} />
             </Switch>
           </main>
         </Router>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
 //styles
@@ -21,24 +21,24 @@ const NavBar = () => {
         {currentUser && (
           <>
             <li>
-              <Link className="navLink" to="/">
+              <NavLink exact to="/" className="navLink" activeClassName="navLink-active">
                 DingDong
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link className="navLink" to="/create">
-                Create Tennant
-              </Link>
+              <NavLink exact to="/create" className="navLink" activeClassName="navLink-active">
+                Add Tennant
+              </NavLink>
             </li>
             <li>
-              <Link className="navLink" to="/about-us">
+              <NavLink exact to="/about-us" className="navLink" activeClassName="navLink-active">
                 About
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/" onClick={handleLogout}>
+              <NavLink exact to="/" onClick={handleLogout} className="navLink">
                 Log out
-              </Link>
+              </NavLink>
             </li>
           </>
         )}

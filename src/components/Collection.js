@@ -11,9 +11,8 @@ const Collection = (packages) => {
   });
 
   const submitForm = (e) => {
-    e.preventDefault();
-    console.log(packages);
-    console.log(packages[0]);
+    console.log(packages, "Package has been collectd");
+    //console.log(packages[0]);
     updatePackage(packages.packages[0].id);
     resetInput(e);
   };

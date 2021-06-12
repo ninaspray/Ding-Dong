@@ -12,10 +12,10 @@ const SendDingDong = ({ tennantId, addParcel }) => {
   });
 
   const submitForm = (e) => {
-    e.preventDefault();
     newParcel({ size }, tennantId).then((parcel) => {
       addParcel(tennantId, parcel);
     });
+    console.log("Ding Dong Sent!");
     resetInput(e);
   };
 
@@ -37,7 +37,11 @@ const SendDingDong = ({ tennantId, addParcel }) => {
           </select>
         </label>
         <span> </span>
-        <button className="table__button" type="submit" onClick={() => newMessage(tennantId)}>
+        <button
+          className="table__button"
+          type="submit"
+          onClick={() => newMessage(tennantId)}
+        >
           Send DingDong
         </button>
       </form>
