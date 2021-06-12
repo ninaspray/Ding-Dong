@@ -31,6 +31,26 @@ const TenantList = () => {
     );
   };
 
+  const markParcelAsCollected = (tennantId, parcelId) => {
+    console.log(tennantId, parcelId);
+    const updatedList = originalList.map((tennant) => {
+      let updatedPackages = tennant.packages;
+      if (tennant.id === tennantId) {
+        updatedPackages = tennant.packages.map((parcel) => {
+          if (parcel.id === parcelId) {
+            return { ...parcel, collected: true };
+          }
+          return parcel;
+        });
+      }
+      tennant.packages = updatedPackages;
+      return tennant;
+    });
+    console.log(originalList, "Original List");
+    console.log(updatedList, "Updated List");
+    setOriginalList(updatedList);
+  };
+
   const onSearch = (searchText) => {
     const filteredList = originalList.filter((ListItem) =>
       ListItem.firstname.toLowerCase().includes(searchText.toLowerCase())
@@ -38,6 +58,8 @@ const TenantList = () => {
     setList(filteredList);
     console.log(filteredList);
   };
+
+  console.log(originalList);
 
   return (
     <div>
@@ -58,6 +80,7 @@ const TenantList = () => {
                 tennant={tennant}
                 key={tennant.id}
                 addParcel={addParcel}
+                markParcelAsCollected={markParcelAsCollected}
               />
             ))}
           </tbody>

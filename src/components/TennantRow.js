@@ -2,9 +2,14 @@ import React from "react";
 import SendDingDong from "./SendDingDong";
 import Collected from "./Collection";
 
-const TennantRow = ({ tennant, addParcel }) => {
+const TennantRow = ({ tennant, addParcel, markParcelAsCollected }) => {
   const { firstname, lastname, flat_number, id, packages } = tennant;
   const filtered = packages.filter((pack) => pack?.collected === false);
+  console.log(tennant);
+  const packageId =
+    filtered.length !== 0
+      ? filtered.find((pack) => pack.collected === false).id
+      : 0;
 
   return (
     <tr>
@@ -18,7 +23,12 @@ const TennantRow = ({ tennant, addParcel }) => {
         </td>
       ) : (
         <td>
-          <Collected packages={filtered}></Collected>
+          <Collected
+            tennantId={id}
+            packages={filtered}
+            markParcelAsCollected={markParcelAsCollected}
+            packageId={packageId}
+          ></Collected>
         </td>
       )}
     </tr>

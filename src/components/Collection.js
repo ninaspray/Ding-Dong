@@ -2,35 +2,25 @@ import React from "react";
 import updatePackage from "../requests/updatePackage";
 import "../styles/Table.css";
 
-//custom Hooks
-import { useForm } from "../hooks/useForm";
+const Collection = ({
+  packages,
+  markParcelAsCollected,
+  packageId,
+  tennantId,
+}) => {
+  console.log(packages);
 
-const Collection = (packages) => {
-  const [{ collected }, setInput, resetInput] = useForm({
-    collected: true,
-  });
-
-  const submitForm = (e) => {
+  const handleClick = (e) => {
     console.log(packages, "Package has been collectd");
-    //console.log(packages[0]);
-    updatePackage(packages.packages[0].id);
-    resetInput(e);
+    updatePackage(packageId);
+    markParcelAsCollected(tennantId, packageId);
   };
 
   return (
     <div className="table__wrapper">
-      <form onSubmit={submitForm}>
-        <button
-          className="table__button"
-          placeholder="Parcel Size"
-          name="Collected"
-          value={collected}
-          onChange={setInput}
-          type="submit"
-        >
-          Collected
-        </button>
-      </form>
+      <button className="table__button" onClick={handleClick}>
+        Collected
+      </button>
     </div>
   );
 };
