@@ -53,7 +53,7 @@ const TenantList = () => {
 
   const onSearch = (searchText) => {
     const filteredList = originalList.filter((ListItem) =>
-      ListItem.firstname.toLowerCase().includes(searchText.toLowerCase())
+      ListItem.lastname.toLowerCase().includes(searchText.toLowerCase())
     );
     setList(filteredList);
     console.log(filteredList);

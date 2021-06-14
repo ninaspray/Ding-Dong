@@ -87,3 +87,7 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+#search {
+    margin-top: 0;
+}

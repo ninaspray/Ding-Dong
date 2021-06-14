@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../styles/Form.css';
 
 const SearchBar = (props) => {
   const [searchText, setSearchText] = useState("");
@@ -9,19 +10,22 @@ const SearchBar = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        id="search"
-        name="search"
-        placeholder="Tenant Name"
-        onChange={(e) => {
-          setSearchText(e.target.value);
-        }}
-        value={searchText}
-      />
-      <button type="submit">Search</button>
-    </form>
+    <div className="form">
+      <form onSubmit={handleSubmit}>
+        <input
+          className="form__input"
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Tenant Surname"
+          onChange={(e) => {
+            setSearchText(e.target.value);
+          }}
+          value={searchText}
+        />
+        <button className="form__button" type="submit">Search</button>
+      </form>
+    </div>
   );
 };
 

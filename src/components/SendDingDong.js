@@ -20,7 +20,7 @@ const SendDingDong = ({ tennantId, addParcel }) => {
   };
 
   return (
-    <div>
+    <div className="table__notify-section">
       <form onSubmit={submitForm}>
         <label htmlFor="Type">
           <select
@@ -39,6 +39,7 @@ const SendDingDong = ({ tennantId, addParcel }) => {
         <span> </span>
         <button
           className="table__button"
+          id="send-dingdong"
           type="submit"
           onClick={() => newMessage(tennantId)}
         >
