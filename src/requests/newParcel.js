@@ -2,7 +2,7 @@ import axios from "axios";
 
 const newParcel = async (parcel, tennantId) => {
   const path = `https://ding-dong-backend.herokuapp.com/tennants/${tennantId}/packages`;
-  console.log(parcel);
+  //console.log(parcel);
   const data = {
     size: parcel.size,
   };

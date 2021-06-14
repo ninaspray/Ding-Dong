@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const updatePackage = (packageId) => {
-  console.log(packageId);
+  //console.log(packageId);
   const data = {
     collected: true,
   };

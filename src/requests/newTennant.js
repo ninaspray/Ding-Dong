@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const newTennant = (tennant) => {
-  console.log(tennant);
+  //console.log(tennant);
   const data = {
     firstname: tennant.firstname,
     lastname: tennant.lastname,
@@ -12,7 +12,7 @@ const newTennant = (tennant) => {
   axios
     .post(`https://ding-dong-backend.herokuapp.com/tennants`, data)
     .then((response) => {
-      console.log(response);
+      //console.log(response);
     })
     .catch((error) => {
       console.log(error);
