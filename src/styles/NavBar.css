@@ -37,12 +37,6 @@
     cursor: pointer;
 }
 
-.StyledNav a {
-    /* color: #444341;
-    margin: 20px;
-    display: block; */
-}
-
 a:hover {
     background-color:#fabadd;
     -moz-border-radius-topleft: 20px;
