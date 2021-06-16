@@ -1,14 +1,18 @@
-.about {
+.about__content {
   margin-top: 5vh;
   margin-bottom: 4vh;
-  position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 150px;
-  min-width: 600px;
+  /* align-items: center; */
+  /* justify-content: center; */
+  padding: 0 180px;
+  min-width: 200px;
+  text-align: left;
+}
+
+.about__image {
+  padding-top: 40px;
 }
 
 .App-text-color {
@@ -16,18 +20,18 @@
 }
 
 .video-responsive {
-  overflow: hidden;
+  overflow: visible;
   padding-bottom: 56.25%;
   position: relative;
   height: 0;
+  margin-bottom: 150px;
 }
 
-.video-responsive iframe {
+.video-responsive:iframe {
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  position: absolute;
 }
 
 .about__final-paragraph {
@@ -38,4 +42,3 @@ a {
   padding-left: 3px;
   padding-right: 3px;
 }
-

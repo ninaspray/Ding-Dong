@@ -19,8 +19,9 @@ const Collection = ({
   return (
     <div className="table__notify-section">
       <button className="table__button" id="collected" onClick={handleClick}>
-        Parcels Collected
+        Tenant Notified
       </button>
+      {/* <p>Click on Collection</p> */}
     </div>
   );
 };
