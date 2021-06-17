@@ -24,13 +24,19 @@
 
 .form__signup-login {
     display: flex;
+    font-weight: bold;
     justify-content: center;
     text-align: center;
     color: rgb(99 99 99);
     text-decoration: none;
-    font-size: 12px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.form__signup-login:hover {
+    color: black;
+    background-color: transparent;
 }
 
 .form__error {
@@ -48,6 +54,7 @@
     align-items: center;
     justify-content: center;
     background-color: #8bdbfe;
+    color: #444341;
     border-style: none;
     margin-top: 20px;
     font-weight: bold;
@@ -57,7 +64,8 @@
 }
 
 .form__button:hover {
-    background-color: #fabadd;
+    background-color:#fabadd;
+    color: black;
 }
 
 .form__input {
@@ -84,4 +92,8 @@
     padding: 10px 5px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+#search {
+    margin-top: 0;
 }

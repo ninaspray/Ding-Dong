@@ -13,7 +13,6 @@ const TennantRow = ({ tennant, addParcel, markParcelAsCollected }) => {
 
   return (
     <tr>
-      {" "}
       <td>{firstname}</td>
       <td>{lastname}</td>
       <td>{flat_number}</td>
